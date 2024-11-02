@@ -1,0 +1,23 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.pdf-container {
+    display: flex; /* Aligns items in a row */
+    flex-direction: row; /* Sets the direction to row */
+    gap: 10px; /* Space between the iframes */
+}
+iframe {
+    width: 300px; /* Adjust width as needed */
+    height: 300px; /* Adjust height as needed */
+    border-radius:2px;
+}
+.pdf-label {
+    display: block;
+    text-align: center; /* Center-aligns the link */
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #000000; /* Link color */
+    text-decoration: none;
+}

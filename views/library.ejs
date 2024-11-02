@@ -1,0 +1,60 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>TextBooks</h1>
+<div class="pdf-container">
+  <div>
+      <iframe src="/assets/income.pdf#toolbar=0" title="Sample PDF Document"></iframe>
+      <a href="sample.pdf" class="pdf-label" target="_blank">Open Sample PDF</a>
+  </div>
+  <div>
+      <iframe src="/assets/income.pdf#toolbar=0" title="Income PDF Document"></iframe>
+      <a href="income.pdf" class="pdf-label" target="_blank">Open Income PDF</a>
+  </div>
+</div>
+
+  </body>
+</html> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploaded Files</title>
+</head>
+<body>
+    <h1>Uploaded Files</h1>
+    <ul>
+        <% if (files && files.length > 0) { %>
+            <% req.files.forEach(file => { %>
+                <li><a href="/public/uploads/<%= file %>"><%= file %></a></li>
+            <% }); %>
+        <% } else { %>
+            <li>No files uploaded yet.</li>
+        <% } %>
+    </ul>
+    <a href="/">Back to Upload</a>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Uploaded Files</title>
+</head>
+<body>
+  <h1>Uploaded Files</h1>
+  <ul>
+    <% files.forEach(file => { %>
+      <li><a href="/uploads/<%= file.filename %>"><%= file.filename %></a></li>
+    <% }) %>
+  </ul>
+</body>
+</html>
