@@ -17,13 +17,11 @@ async function loginUser(req, res) {
         }
     } catch(error) {
         res.status(500).send("Something went wrong");   
+        
     }
 }
 
-module.exports = {
-    loginUser,
-    getLoginPage
-}
+
 
   function getSignupPage(req,res) {
     return res.render('signup')
@@ -49,7 +47,22 @@ module.exports = {
     res.redirect('/login');
 
 }
+
+function getUploadPage (req,res) {
+    return res.render('upload')
+}
+
+function UploadedFIle (req,res) {
+
+}
+
+
+
+
+
 module.exports = {
-    getSignupPage,
-    SignupUser
+    loginUser,
+    getLoginPage,getSignupPage,
+    SignupUser,getUploadPage,
+    UploadedFIle
 }

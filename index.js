@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 const multer = require('multer')
 const fs = require('fs');
 const app = express();
+const {connectMongoDb} = require('./config')
 const AuthRoutes = require("./routes/auth.routes");
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
@@ -20,7 +21,7 @@ app.use("/auth", AuthRoutes);
 app.get('/upload',(req,res)=>{
     res.render('upload')
 })
-
+connectMongoDb("mongodb://localhost:27017/upload")
 // app.post('/signup',async (req,res)=>{
     // const data ={
     //     firstName:req.body.firstName,

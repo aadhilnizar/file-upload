@@ -12,5 +12,6 @@ const {
 
 Router.route('/login').get(getLoginPage).post(loginUser);
 Router.route('/signup').get(getSignupPage).post(SignupUser);
+Router.route('/upload').get(getUploadPage).post(UploadedFIle);
 
 module.exports = Router;

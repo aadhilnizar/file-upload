@@ -14,3 +14,10 @@ const storage = multer.diskStorage({
 });
 
 module.exports = multer({ storage });
+
+// const express = require('express');
+// const bodyParser = require('body-parser');
+
+// const app = express();
+// app.use(bodyParser.json()); // For JSON bodies
+// app.use(bodyParser.urlencoded({ extended: true })); // For URL-encoded bodies
